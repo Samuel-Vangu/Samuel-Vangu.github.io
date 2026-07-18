@@ -12,7 +12,7 @@ profile:
     <p>Grenoble, France</p>
 
 selected_papers: false              # Désactivé (pas encore de publications)
-social: true                        # Affiche les icônes des réseaux sociaux
+social: false                        # Affiche les icônes des réseaux sociaux
 
 announcements:
   enabled: false                    # Désactivé (pas encore de news)
@@ -27,4 +27,4 @@ latest_posts:
 
 I'm an undergraduate student in both Mathematics and Computer Science at Université Grenoble Alpes (UGA). My goal is to become an AI/ML researcher, but I'm still early in my journey.
 
-If you'd like to collaborate or just chat about research, feel free to reach out via email!
+If you'd like to collaborate or just chat about research, feel free to reach out via email at samuelvangu0@gmail.com !
