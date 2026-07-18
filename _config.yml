@@ -9,9 +9,16 @@ description: >-
   Computer Science and Mathematics student at Université Grenoble Alpes, passionate about AI, Machine Learning, and Optimal Transport.
 
 # Social & contact
+# Social networks
 email: samuelvanguo@email.com
 github_username: Samuel-Vangu
 linkedin_username: samuel-vangu
+
+# Supprime ou laisse vide les réseaux que tu n'utilises pas
+scholar_userid: ""          # ← vide (supprime Google Scholar)
+orcid_id: ""                # ← vide
+twitter_username: ""        # ← vide
+website: ""               # ← supprime ou laisse vide (supprime le site d'Einstein)
 
 # URL
 url: "https://Samuel-Vangu.github.io"
