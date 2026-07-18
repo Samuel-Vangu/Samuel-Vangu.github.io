@@ -1,89 +1,95 @@
-# ============================================================
-# CV - Samuel Vangu
-# Généré à partir du CV fourni
-# ============================================================
+cv:
+  name: Samuel Vangu
+  label: Computer Science and Mathematics Student
+  email: samuelvanguo@email.com
+  location: Grenoble, France
+  image: ""
+  summary: >
+    Computer Science and Mathematics student at Université Grenoble Alpes (UGA).
+    Interested Machine Learning.
 
-# --- Informations de contact ---
-name: Samuel Vangu
-professional_title: Computer Science and Mathematics Student
-email: samuelvangu0@email.com
-location: Grenoble, France
-# Les liens sociaux sont gérés dans _config.yml, pas besoin de les mettre ici
+  social_networks:
+    - network: GitHub
+      username: Samuel-Vangu
+    - network: LinkedIn
+      username: samuel-vangu
 
-# --- Résumé (optionnel, tu peux le laisser vide si tu préfères) ---
-summary: |
-  Computer Science and Mathematics student at Université Grenoble Alpes (UGA).
-  Interested in Machine learning.
+  address:
+    street: 55 Allée Condillac
+    city: Grenoble
+    region: Isère
+    postalCode: 38400
+    countryCode: FR
 
-# --- Formation ---
-education:
-  - degree: Bachelor's Degree in Computer Science and Mathematics
-    institution: Université Grenoble Alpes (UGA), France
-    start_date: 2025-09
-    end_date: 2028-06
-    description: |
-      First-Year Average: 19.141/20
-      Ranked 1st out of 234 students
-      Relevant coursework: Linear Algebra, Probability, Statistics, Algorithms
+  sections:
+    Education:
+      - institution: Université Grenoble Alpes (UGA)
+        location: Grenoble, France
+        url: https://www.univ-grenoble-alpes.fr/
+        area: Computer Science and Mathematics
+        studyType: Bachelor's Degree
+        start_date: 2025-09
+        end_date: 2028-06
+        score: "19.14/20 - Ranked 1st out of 234 students"
+        highlights:
+          - "First-Year Average: 19.141/20"
+          - "Ranked 1st out of 234 students"
+          - "Relevant coursework: Linear Algebra, Probability, Statistics, Algorithms, Machine Learning"
 
-# --- Expériences professionnelles ---
-experience:
-  - title: Research Intern - DAO Team (Data, Learning and Optimization)
-    institution: LJK Laboratory, Grenoble, France
-    start_date: 2026-05
-    end_date: 2026-07
-    description: |
-      Developed a Python library for Monte Carlo and quasi-Monte Carlo methods in numerical integration, including sampling algorithms, statistical analysis, and experimental benchmarking.
-      Reproduced and analyzed experiments from the research paper "Optimal Transport for Domain Adaptation" (Courty et al., 2015), studying optimal transport applications in machine learning domain adaptation.
-      Contributed to the open-source Julia ecosystem through a pull request to OptimalTransport.jl, an optimal transport library.
-      Studied research literature on Monte Carlo methods, quasi-Monte Carlo integration, optimal transport theory, and their applications in machine learning.
-    supervisor: Quoc-Tung Le and Matthieu Besançon
+    Experience:
+      - company: LJK Laboratory - DAO Team (Data, Learning and Optimization)
+        position: Research Intern
+        location: Grenoble, France
+        start_date: 2026-05
+        end_date: 2026-07
+        summary: Developed a Python library for Monte Carlo and quasi-Monte Carlo methods in numerical integration, including sampling algorithms, statistical analysis, and experimental benchmarking.
+        highlights:
+          - "Reproduced and analyzed experiments from 'Optimal Transport for Domain Adaptation' (Courty et al., 2015)"
+          - "Contributed to the open-source Julia ecosystem through a pull request to OptimalTransport.jl"
+          - "Studied research literature on Monte Carlo methods, quasi-Monte Carlo integration, optimal transport theory, and their applications in machine learning"
+          - "Supervised by Quoc-Tung Le and Matthieu Besançon"
 
-# --- Projets ---
-projects:
-  - name: QMClib - Monte Carlo and Quasi-Monte Carlo Library
-    description: |
-      Open-source Python library implementing Monte Carlo and quasi-Monte Carlo algorithms for numerical integration, including Uniform sampling, Latin Hypercube Sampling, Halton, Sobol, and lattice-based methods.
-      Designed a modular framework for sampling methods, statistical analysis, convergence evaluation, and performance benchmarking of numerical integration algorithms.
-      Validated implementations through numerical experiments and comparative benchmarks against established quasi-Monte Carlo libraries.
-      Applied quasi-Monte Carlo techniques to a machine learning risk estimation problem, exploring their potential for high-dimensional integration tasks.
-    technologies: Python, NumPy, SciPy, Matplotlib, Pyperf
-    start_date: 2026-05
-    end_date: 2026-07
+    Projects:
+      - name: QMClib - Monte Carlo and Quasi-Monte Carlo Library
+        summary: Open-source Python library implementing Monte Carlo and quasi-Monte Carlo algorithms for numerical integration, including Uniform sampling, Latin Hypercube Sampling, Halton, Sobol, and lattice-based methods.
+        highlights:
+          - "Designed a modular framework for sampling methods, statistical analysis, convergence evaluation, and performance benchmarking"
+          - "Validated through numerical experiments and comparative benchmarks against established quasi-Monte Carlo libraries"
+          - "Applied to a machine learning risk estimation problem for high-dimensional integration tasks"
+        start_date: 2026-05
+        end_date: 2026-07
+        technologies: Python, NumPy, SciPy, Matplotlib, Pyperf
 
-# --- Compétences techniques ---
-skills:
-  - name: Programming
-    items:
-      - Python
-      - C
-  - name: Machine Learning & Scientific Computing
-    items:
-      - PyTorch
-      - NumPy
-      - SciPy
-      - pandas
-      - Matplotlib
-      - scikit-learn
-  - name: Research Tools
-    items:
-      - LaTeX
-      - Jupyter Notebook
-  - name: Development Tools
-    items:
-      - Git
-      - GitHub
-      - Linux
-      - VS Code
+    Skills:
+      - name: Programming
+        level: ""
+        keywords: Python, C
+      - name: Machine Learning & Scientific Computing
+        level: ""
+        keywords: PyTorch, NumPy, SciPy, pandas, Matplotlib, scikit-learn
+      - name: Research Tools
+        level: ""
+        keywords: LaTeX, Jupyter Notebook
+      - name: Development Tools
+        level: ""
+        keywords: Git, GitHub, Linux, VS Code
 
-# --- Récompenses et distinctions ---
-awards:
-  - title: National Excellencia Scholarship Competition - 2nd Place
-    description: Ranked 2nd nationwide in the Excellencia Excellence Scholarship selection process, Democratic Republic of the Congo
+    Awards:
+      - title: National Excellencia Scholarship Competition - 2nd Place
+        summary: Ranked 2nd nationwide in the Excellencia Excellence Scholarship selection process, Democratic Republic of the Congo
+        date: 2025
+        awarder: Excellencia Scholarship Program
 
-# --- Langues ---
-languages:
-  - language: French
-    proficiency: Native proficiency
-  - language: English
-    proficiency: Professional working proficiency
+    Languages:
+      - name: French
+        summary: Native proficiency
+      - name: English
+        summary: Professional working proficiency
+
+    Interests:
+      - name: Machine Learning
+        keywords: "Optimal Transport, Domain Adaptation, Monte Carlo Methods, Numerical Integration"
+      - name: Artificial Intelligence
+        keywords: "Deep Learning, Statistical Learning, Optimization"
+      - name: Scientific Computing
+        keywords: "Python, Julia, High-Performance Computing"
