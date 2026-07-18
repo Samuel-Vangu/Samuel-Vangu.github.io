@@ -1,14 +1,8 @@
+# GitHub users (ton profil)
 github_users:
-  - torvalds
-  - alshedivat
+  - Samuel-Vangu
 
-repo_description_lines_max: 2
-
+# GitHub repositories (tes dépôts)
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Samuel-Vangu/qmc-lib
+  - Samuel-Vangu/domain-adaptation-with-optimal-transport
