@@ -9,4 +9,5 @@ cv_format: jsonresume
 description: My academic and research journey.
 toc:
   sidebar: left
+noindex: true
 ---
