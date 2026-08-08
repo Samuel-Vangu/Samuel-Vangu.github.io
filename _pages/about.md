@@ -25,6 +25,6 @@ latest_posts:
   limit: 3
 ---
 
-I'm an undergraduate student in both Mathematics and Computer Science at Université Grenoble Alpes (UGA). My goal is to become an AI/ML researcher, but I'm still early in my journey.
+I'm an undergraduate student in both Mathematics and Computer Science at Université Grenoble Alpes (UGA). I'm interested in AI/ML , and I'm exploring opportunities in both research and engineering.
 
-If you'd like to collaborate or just chat about research, feel free to reach out via email at samuelvangu0@gmail.com !
+Feel free to reach out via email at [samuelvangu0@gmail.com](mailto:samuelvangu0@gmail.com)!
