@@ -6,7 +6,7 @@ nav: true
 nav_order: 3
 cv_pdf: /assets/pdf/resume.pdf   # ← chemin corrigé
 cv_format: jsonresume
-description: My academic and research journey.
+description: My journey.
 toc:
   sidebar: left
 noindex: true
