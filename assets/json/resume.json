@@ -7,12 +7,8 @@
     "phone": "+33 6 02 95 41 83",
     "url": "https://Samuel-Vangu.github.io",
     "location": {
-      "address": "55 All\u00e9e Condillac",
-      "postalCode": "38400",
-      "city": "Grenoble",
-      "countryCode": "FR",
-      "region": "Is\u00e8re"
-    },
+      "address": "Grenoble, France"
+    }
     "profiles": [
       {
         "network": "GitHub",
@@ -60,9 +56,9 @@
   ],
   "awards": [
     {
-      "title": "National Excellencia Scholarship Competition - 2nd Place",
+      "title": "National Excellentia Scholarship Competition - 2nd Place",
       "date": "2025",
-      "summary": "Ranked 2nd nationwide in the Excellencia Excellence Scholarship selection process, Democratic Republic of the Congo"
+      "summary": "Ranked 2nd nationwide in the Excellentia Excellence Scholarship selection process, Democratic Republic of the Congo"
     }
   ],
   "skills": [
