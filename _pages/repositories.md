@@ -1,85 +1,56 @@
 ---
-
 layout: page
 permalink: /repositories/
 title: Open Source Contributions
-description: Contributions to open-source scientific computing and machine learning projects.
+description: My contributions to open-source scientific computing and machine learning projects.
 nav: true
 nav_order: 4
-------------
+---
 
-I contribute to open-source projects in **scientific computing and machine learning**, with a particular interest in numerical methods, Monte Carlo methods, and machine learning.
+I contribute to open-source projects in scientific computing and machine learning.
 
 ---
 
-## 🔬 Contributions
+## GitHub Profile
 
-<div class="row">
+{% if site.data.repositories.github_users %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for user in site.data.repositories.github_users %}
+    {% include repository/repo_user.liquid username=user %}
+  {% endfor %}
+</div>
+{% endif %}
 
-  <div class="col-md-12">
-    <div class="card h-100 hoverable">
-      <div class="card-body">
+---
 
-```
-    <div class="d-flex align-items-center mb-3">
-      <img src="https://qmcsoftware.org/assets/img/QMCPyLogo.svg"
-           alt="QMCPy logo"
-           style="height: 55px; width: auto; margin-right: 20px;">
-      <div>
-        <h3 class="card-title mb-1">
-          <a href="https://qmcsoftware.org/">QMCPy</a>
-        </h3>
-        <p class="mb-0 text-muted">
-          Quasi-Monte Carlo software for Python
-        </p>
+## Notable Contributions
+
+<div class="row row-cols-1 row-cols-md-3">
+  {% assign contributions = site.contributions | where: "category", "open-source" | sort: "importance" %}
+  {% for contribution in contributions %}
+    <div class="col">
+      <div class="card h-100">
+        {% if contribution.img %}
+          <img src="{{ contribution.img | relative_url }}" class="card-img-top" alt="{{ contribution.title }}" style="height: 120px; object-fit: contain; padding: 10px;">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ contribution.title }}</h5>
+          <p class="card-text">{{ contribution.description }}</p>
+          <div class="card-text">
+            {{ contribution.content | markdownify }}
+          </div>
+          <a href="{{ contribution.url | default: '#' }}" class="btn btn-primary btn-sm" target="_blank">
+            View Contribution
+          </a>
+        </div>
+        <div class="card-footer text-muted">
+          🚀 Merged
+        </div>
       </div>
     </div>
-
-    <h4>Latin Hypercube, Korobov Lattice & Hammersley Samplers</h4>
-
-    <p>
-      Added three sampling methods to QMCPy:
-      <strong>Latin Hypercube</strong>,
-      <strong>Korobov Lattice</strong>, and
-      <strong>Hammersley</strong> samplers.
-    </p>
-
-    <p>
-      The contribution included the implementation of the new samplers,
-      integration with the existing sampler infrastructure,
-      tests and documentation, as well as a demonstration notebook.
-    </p>
-
-    <p>
-      <a href="https://github.com/QMCSoftware/QMCSoftware/pull/582"
-         class="btn btn-sm btn-primary">
-        <i class="fab fa-github"></i> View merged PR #582
-      </a>
-    </p>
-
-    <div>
-      <span class="badge badge-pill badge-secondary">Python</span>
-      <span class="badge badge-pill badge-secondary">Quasi-Monte Carlo</span>
-      <span class="badge badge-pill badge-success">Merged PR</span>
-      <span class="badge badge-pill badge-secondary">Scientific Computing</span>
-    </div>
-
-  </div>
-</div>
-```
-
-  </div>
-
+  {% endfor %}
 </div>
 
 ---
 
-## 💻 GitHub
-
-<div class="text-center">
-
-<a href="https://github.com/Samuel-Vangu"
-  class="btn btn-lg btn-outline-primary"> <i class="fab fa-github"></i>  Visit my GitHub profile </a>
-
-</div>
-
+For more, visit my [GitHub profile](https://github.com/Samuel-Vangu).
