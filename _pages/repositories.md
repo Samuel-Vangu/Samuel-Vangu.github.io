@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: Open Source Contributions
-description: My contributions to open-source scientific computing and machine learning projects.
+description: Some of my contributions to open-source scientific computing and machine learning projects.
 nav: true
 nav_order: 4
 ---
