@@ -1,29 +1,85 @@
 ---
+
 layout: page
 permalink: /repositories/
 title: Open Source Contributions
-description: My contributions to open-source scientific computing and machine learning projects.
+description: Contributions to open-source scientific computing and machine learning projects.
 nav: true
 nav_order: 4
----
+------------
 
-I contribute to open-source projects in scientific computing and machine learning.
-
----
-
-## 📌 Notable Contributions
-
-### [QMCPy](https://qmcsoftware.org/)
-
-**Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
-[Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
-
-Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. The contribution added **Latin Hypercube, Korobov Lattice, and Hammersley samplers**, together with a demonstration notebook showcasing their usage, tests and documentation.
-
-This contribution involved extending the library's sampler infrastructure, integrating the new methods consistently with the existing API, and providing practical examples through an interactive notebook.
-
-This is my first accepted and merged contribution to a major open-source scientific computing project.
+I contribute to open-source projects in **scientific computing and machine learning**, with a particular interest in numerical methods, Monte Carlo methods, and machine learning.
 
 ---
 
-For more, visit my [GitHub profile](https://github.com/Samuel-Vangu).
+## 🔬 Contributions
+
+<div class="row">
+
+  <div class="col-md-12">
+    <div class="card h-100 hoverable">
+      <div class="card-body">
+
+```
+    <div class="d-flex align-items-center mb-3">
+      <img src="https://qmcsoftware.org/assets/img/QMCPyLogo.svg"
+           alt="QMCPy logo"
+           style="height: 55px; width: auto; margin-right: 20px;">
+      <div>
+        <h3 class="card-title mb-1">
+          <a href="https://qmcsoftware.org/">QMCPy</a>
+        </h3>
+        <p class="mb-0 text-muted">
+          Quasi-Monte Carlo software for Python
+        </p>
+      </div>
+    </div>
+
+    <h4>Latin Hypercube, Korobov Lattice & Hammersley Samplers</h4>
+
+    <p>
+      Added three sampling methods to QMCPy:
+      <strong>Latin Hypercube</strong>,
+      <strong>Korobov Lattice</strong>, and
+      <strong>Hammersley</strong> samplers.
+    </p>
+
+    <p>
+      The contribution included the implementation of the new samplers,
+      integration with the existing sampler infrastructure,
+      tests and documentation, as well as a demonstration notebook.
+    </p>
+
+    <p>
+      <a href="https://github.com/QMCSoftware/QMCSoftware/pull/582"
+         class="btn btn-sm btn-primary">
+        <i class="fab fa-github"></i> View merged PR #582
+      </a>
+    </p>
+
+    <div>
+      <span class="badge badge-pill badge-secondary">Python</span>
+      <span class="badge badge-pill badge-secondary">Quasi-Monte Carlo</span>
+      <span class="badge badge-pill badge-success">Merged PR</span>
+      <span class="badge badge-pill badge-secondary">Scientific Computing</span>
+    </div>
+
+  </div>
+</div>
+```
+
+  </div>
+
+</div>
+
+---
+
+## 💻 GitHub
+
+<div class="text-center">
+
+<a href="https://github.com/Samuel-Vangu"
+  class="btn btn-lg btn-outline-primary"> <i class="fab fa-github"></i>  Visit my GitHub profile </a>
+
+</div>
+
