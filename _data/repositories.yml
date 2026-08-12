@@ -1,8 +1,3 @@
 # GitHub users (ton profil)
 github_users:
   - Samuel-Vangu
-
-# GitHub repositories (tes dépôts)
-github_repos:
-  - Samuel-Vangu/qmc-lib
-  - Samuel-Vangu/domain-adaptation-with-optimal-transport
