@@ -20,7 +20,7 @@ nav_order: 4
 ---
 
 ## Notable Contributions
-
+---
 ### - QMCPy
 
 **Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
@@ -30,3 +30,4 @@ Contributed three new sampling methods to **QMCPy**, an open-source Python libra
 The contribution included the implementation of the new samplers, integration with the existing sampler infrastructure, tests and documentation, as well as a demonstration notebook.
 
 This is my first accepted and merged contribution to a major open-source scientific computing project.
+---
