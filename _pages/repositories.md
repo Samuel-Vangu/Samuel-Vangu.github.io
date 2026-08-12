@@ -21,7 +21,7 @@ nav_order: 4
 
 ## Notable Contributions
 
-### 1.QMCPy
+### - QMCPy
 
 **Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
 [Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
