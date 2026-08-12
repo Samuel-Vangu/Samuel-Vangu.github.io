@@ -1,47 +1,29 @@
 ---
 layout: page
 permalink: /repositories/
-title: Open Source
-description: A collection of my open-source projects and contributions.
+title: Open Source Contributions
+description: My contributions to open-source scientific computing and machine learning projects.
 nav: true
 nav_order: 4
 ---
 
-{% if site.data.repositories.github_users %}
-
-## GitHub users
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
+I contribute to open-source projects in scientific computing and machine learning.
 
 ---
 
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
+## 📌 Notable Contributions
 
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
-  </div>
+### [QMCPy](https://qmcsoftware.org/)
+
+**Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
+[Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
+
+Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. The contribution added **Latin Hypercube, Korobov Lattice, and Hammersley samplers**, together with a demonstration notebook showcasing their usage, tests and documentation.
+
+This contribution involved extending the library's sampler infrastructure, integrating the new methods consistently with the existing API, and providing practical examples through an interactive notebook.
+
+This is my first accepted and merged contribution to a major open-source scientific computing project.
 
 ---
 
-{% endfor %}
-{% endif %}
-{% endif %}
-
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
+For more, visit my [GitHub profile](https://github.com/Samuel-Vangu).
