@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: Open Source Contributions
-description: Some of my contributions to open-source scientific computing and machine learning projects.
+description: My contributions to open-source scientific computing and machine learning projects.
 nav: true
 nav_order: 4
 ---
@@ -25,31 +25,14 @@ I contribute to open-source projects in scientific computing and machine learnin
 
 ## Notable Contributions
 
-<div class="row row-cols-1 row-cols-md-3">
-  {% assign contributions = site.contributions | where: "category", "open-source" | sort: "importance" %}
-  {% for contribution in contributions %}
-    <div class="col">
-      <div class="card h-100">
-        {% if contribution.img %}
-          <img src="{{ contribution.img | relative_url }}" class="card-img-top" alt="{{ contribution.title }}" style="height: 120px; object-fit: contain; padding: 10px;">
-        {% endif %}
-        <div class="card-body">
-          <h5 class="card-title">{{ contribution.title }}</h5>
-          <p class="card-text">{{ contribution.description }}</p>
-          <div class="card-text">
-            {{ contribution.content | markdownify }}
-          </div>
-          <a href="{{ contribution.url | default: '#' }}" class="btn btn-primary btn-sm" target="_blank">
-            View Contribution
-          </a>
-        </div>
-        <div class="card-footer text-muted">
-          🚀 Merged
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+### 🚀 QMCPy
+
+**Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
+[Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
+
+Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. This involved extending the library's sampler infrastructure, integrating new methods consistently with the existing API, and providing practical examples through an interactive notebook as long as tests and documentation.
+
+This is my first accepted and merged contribution to a major open-source scientific computing project.
 
 ---
 
