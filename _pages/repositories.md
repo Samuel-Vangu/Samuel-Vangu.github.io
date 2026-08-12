@@ -7,10 +7,6 @@ nav: true
 nav_order: 4
 ---
 
-I contribute to open-source projects in scientific computing and machine learning.
-
----
-
 ## GitHub Profile
 
 {% if site.data.repositories.github_users %}
@@ -25,15 +21,12 @@ I contribute to open-source projects in scientific computing and machine learnin
 
 ## Notable Contributions
 
-### 🚀 QMCPy
+### QMCPy
 
 **Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
 [Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
 
-Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. This involved extending the library's sampler infrastructure, integrating new methods consistently with the existing API, and providing practical examples through an interactive notebook as long as tests and documentation.
+Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. 
+The contribution included the implementation of the new samplers, integration with the existing sampler infrastructure, tests and documentation, as well as a demonstration notebook.
 
 This is my first accepted and merged contribution to a major open-source scientific computing project.
-
----
-
-For more, visit my [GitHub profile](https://github.com/Samuel-Vangu).
