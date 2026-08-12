@@ -706,7 +706,3 @@ jsonresume:
   - languages
   - interests
   - references
-
-collections:
-  contributions:
-    output: false
