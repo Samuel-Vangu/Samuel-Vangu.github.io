@@ -7,6 +7,10 @@ nav: true
 nav_order: 4
 ---
 
+I contribute to open-source projects in scientific computing and machine learning.
+
+---
+
 ## GitHub Profile
 
 {% if site.data.repositories.github_users %}
@@ -21,16 +25,42 @@ nav_order: 4
 
 ## Notable Contributions
 
----
+<div class="row">
 
-### - QMCPy
+  <!-- Carte pour POT -->
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <img src="{{ '/assets/img/logo_pot.svg' | relative_url }}" class="card-img-top" alt="POT Logo" style="padding: 20px; max-height: 150px; object-fit: contain; background-color: #f8f9fa;">
+      <div class="card-body">
+        <h5 class="card-title">POT: Python Optimal Transport</h5>
+        <p class="card-text">
+          <strong>Contribution:</strong> Merged pull request #838.
+          <br><br>
+          <a href="https://github.com/PythonOT/POT/pull/838" target="_blank" class="btn btn-primary btn-sm">
+            View Pull Request #838
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
 
-**Added Latin Hypercube, Korobov Lattice, and Hammersley samplers**  
-[Pull Request #582](https://github.com/QMCSoftware/QMCSoftware/pull/582) · **Merged**
+  <!-- Carte pour QMCPy -->
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <img src="{{ '/assets/img/qmcpy.logo.png' | relative_url }}" class="card-img-top" alt="QMCPy Logo" style="padding: 20px; max-height: 150px; object-fit: contain; background-color: #f8f9fa;">
+      <div class="card-body">
+        <h5 class="card-title">QMCPy: Quasi-Monte Carlo Python</h5>
+        <p class="card-text">
+          <strong>Contribution:</strong> Merged pull request #582.
+          <br><br>
+          <a href="https://github.com/QMCSoftware/qmcpy/pull/582" target="_blank" class="btn btn-primary btn-sm">
+            View Pull Request #582
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
 
-Contributed three new sampling methods to **QMCPy**, an open-source Python library for quasi-Monte Carlo methods. 
-The contribution included the implementation of the new samplers, integration with the existing sampler infrastructure, tests and documentation, as well as a demonstration notebook.
+</div>
 
-This is my first accepted and merged contribution to a major open-source scientific computing project.
-
----
+For more, visit my [GitHub profile](https://github.com/Samuel-Vangu).
