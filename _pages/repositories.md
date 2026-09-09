@@ -10,9 +10,9 @@ nav_order: 4
 <style>
   .oss-hero {
     position: relative;
-    padding: 2.5rem 1.5rem 2.25rem;
-    margin-bottom: 2.75rem;
-    border-radius: 6px;
+    padding: 3rem 1.75rem 2.5rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
     overflow: hidden;
     background: var(--global-card-bg-color, rgba(127, 127, 127, 0.04));
   }
@@ -39,12 +39,12 @@ nav_order: 4
   .oss-hero-content p {
     margin: 0;
     line-height: 1.65;
-    font-size: 1.02rem;
+    font-size: 1.05rem;
   }
 
   .oss-hero-content p + p {
-    margin-top: 0.6rem;
-    opacity: 0.75;
+    margin-top: 0.65rem;
+    opacity: 0.72;
     font-size: 0.92rem;
   }
 
@@ -61,7 +61,7 @@ nav_order: 4
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.75rem;
-    max-width: 900px;
+    max-width: 940px;
     margin-bottom: 2.5rem;
   }
 
@@ -75,98 +75,104 @@ nav_order: 4
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(127, 127, 127, 0.22);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     background: var(--global-bg-color, transparent);
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   }
 
   .oss-card:hover {
     border-color: rgba(127, 127, 127, 0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
   }
 
   .oss-card-header {
     display: flex;
     align-items: flex-start;
-    gap: 0.9rem;
-    padding: 1.35rem 1.35rem 1rem;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 1.1rem;
   }
 
   .oss-logo-chip {
     flex-shrink: 0;
-    width: 46px;
-    height: 46px;
-    border-radius: 8px;
-    border: 1px solid rgba(127, 127, 127, 0.2);
-    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 9px;
+    border: 1px solid rgba(127, 127, 127, 0.18);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 9px;
     box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .oss-logo-chip img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block;
   }
 
   .oss-card-heading {
     min-width: 0;
-    padding-top: 2px;
+    padding-top: 3px;
   }
 
   .oss-card-heading h3 {
     margin: 0;
-    font-size: 1.02rem;
-    font-weight: 600;
+    font-size: 1.08rem;
+    font-weight: 700;
     line-height: 1.3;
   }
 
   .oss-card-heading .oss-tagline {
     font-size: 0.82rem;
-    opacity: 0.65;
-    margin-top: 0.15rem;
+    opacity: 0.62;
+    margin-top: 0.2rem;
     line-height: 1.4;
   }
 
   .oss-card-body {
-    padding: 0 1.35rem 1.35rem;
+    padding: 0 1.5rem 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
 
-  .oss-card-summary {
-    font-size: 0.88rem;
-    margin: 0 0 0.85rem;
+  .oss-card-impact {
+    font-size: 0.87rem;
+    margin: 0 0 0.95rem;
     line-height: 1.55;
+    font-style: italic;
+    opacity: 0.8;
   }
 
   .oss-card-details {
     list-style: none;
-    margin: 0 0 1.1rem;
+    margin: 0 0 1.15rem;
     padding: 0;
-    font-size: 0.83rem;
-    line-height: 1.55;
-    opacity: 0.85;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.88;
   }
 
   .oss-card-details li {
-    padding-left: 0.95rem;
+    padding-left: 1rem;
     position: relative;
   }
 
   .oss-card-details li + li {
-    margin-top: 0.3rem;
+    margin-top: 0.35rem;
   }
 
   .oss-card-details li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.6em;
+    top: 0.62em;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -178,12 +184,12 @@ nav_order: 4
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin: 0 0 1.15rem;
+    margin: 0 0 1.25rem;
   }
 
   .oss-tag {
     font-size: 0.72rem;
-    padding: 0.2rem 0.55rem;
+    padding: 0.22rem 0.6rem;
     border-radius: 4px;
     background: rgba(127, 127, 127, 0.1);
     opacity: 0.85;
@@ -191,13 +197,28 @@ nav_order: 4
 
   .oss-card-link {
     margin-top: auto;
-    font-size: 0.83rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
+    width: fit-content;
+  }
+
+  .oss-card-link svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
   }
 
   .oss-card-link:hover {
     text-decoration: underline;
+  }
+
+  .oss-card-link:hover svg {
+    transform: translate(2px, -2px);
   }
 </style>
 
@@ -215,9 +236,8 @@ nav_order: 4
   <div class="oss-hero-content">
     <p>
       I contribute quasi-Monte Carlo and low-discrepancy sampling methods
-      to open-source scientific Python libraries &mdash; the code that
-      decides how evenly a computer explores a space it can never fully
-      cover.
+      to open-source scientific Python libraries, the code that decides
+      how evenly a computer explores a space it can never fully cover.
     </p>
     <p>Contributions below are reviewed and merged into their upstream codebases.</p>
   </div>
@@ -249,12 +269,12 @@ nav_order: 4
       </div>
     </div>
     <div class="oss-card-body">
-      <p class="oss-card-summary">
-        Added quasi-Monte Carlo sampling for the Sliced Wasserstein distance.
+      <p class="oss-card-impact">
+        Makes distance estimation between probability distributions more accurate at the same computational cost.
       </p>
       <ul class="oss-card-details">
-        <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov&ndash;Saff&ndash;Zhou), deterministic and randomly rotated</li>
-        <li>Unbiased estimator for use in stochastic optimization</li>
+        <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li>
+        <li>Unbiased estimator, suitable for stochastic optimization</li>
         <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li>
       </ul>
       <div class="oss-tags">
@@ -264,7 +284,11 @@ nav_order: 4
         <span class="oss-tag">Multi-backend numerics</span>
       </div>
       <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener">
-        View PR #838 &nearr;
+        View PR #838
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17L17 7"></path>
+          <path d="M8 7h9v9"></path>
+        </svg>
       </a>
     </div>
   </div>
@@ -281,8 +305,8 @@ nav_order: 4
       </div>
     </div>
     <div class="oss-card-body">
-      <p class="oss-card-summary">
-        Added three low-discrepancy point set generators.
+      <p class="oss-card-impact">
+        Adds three ways to sample points that cover a space more evenly than random sampling.
       </p>
       <ul class="oss-card-details">
         <li>Latin Hypercube sampling</li>
@@ -295,7 +319,11 @@ nav_order: 4
         <span class="oss-tag">Numerical methods</span>
       </div>
       <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener">
-        View PR #582 &nearr;
+        View PR #582
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17L17 7"></path>
+          <path d="M8 7h9v9"></path>
+        </svg>
       </a>
     </div>
   </div>
