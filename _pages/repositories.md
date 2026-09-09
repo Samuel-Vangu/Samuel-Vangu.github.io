@@ -8,46 +8,6 @@ nav_order: 4
 ---
 
 <style>
-  .oss-hero {
-    position: relative;
-    padding: 3rem 1.75rem 2.5rem;
-    margin-bottom: 3rem;
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--global-card-bg-color, rgba(127, 127, 127, 0.04));
-  }
-
-  .oss-hero-points {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  .oss-hero-points circle {
-    fill: currentColor;
-    opacity: 0.35;
-  }
-
-  .oss-hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 620px;
-  }
-
-  .oss-hero-content p {
-    margin: 0;
-    line-height: 1.65;
-    font-size: 1.05rem;
-  }
-
-  .oss-hero-content p + p {
-    margin-top: 0.65rem;
-    opacity: 0.72;
-    font-size: 0.92rem;
-  }
-
   .oss-section-title {
     font-size: 1.05rem;
     font-weight: 600;
@@ -221,27 +181,6 @@ nav_order: 4
     transform: translate(2px, -2px);
   }
 </style>
-
-<div class="oss-hero">
-  <svg class="oss-hero-points" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true">
-    <!-- Low-discrepancy point set, purely decorative -->
-    <circle cx="18" cy="94" r="2.4"/><circle cx="311" cy="12" r="2.4"/><circle cx="162" cy="53" r="2.4"/>
-    <circle cx="461" cy="76" r="2.4"/><circle cx="87" cy="27" r="2.4"/><circle cx="386" cy="105" r="2.4"/>
-    <circle cx="237" cy="88" r="2.4"/><circle cx="536" cy="41" r="2.4"/><circle cx="49" cy="63" r="2.4"/>
-    <circle cx="349" cy="34" r="2.4"/><circle cx="199" cy="8" r="2.4"/><circle cx="498" cy="98" r="2.4"/>
-    <circle cx="124" cy="112" r="2.4"/><circle cx="424" cy="59" r="2.4"/><circle cx="274" cy="21" r="2.4"/>
-    <circle cx="574" cy="70" r="2.4"/><circle cx="6" cy="45" r="2.4"/><circle cx="150" cy="100" r="2.4"/>
-    <circle cx="450" cy="16" r="2.4"/><circle cx="300" cy="65" r="2.4"/>
-  </svg>
-  <div class="oss-hero-content">
-    <p>
-      I contribute quasi-Monte Carlo and low-discrepancy sampling methods
-      to open-source scientific Python libraries, the code that decides
-      how evenly a computer explores a space it can never fully cover.
-    </p>
-    <p>Contributions below are reviewed and merged into their upstream codebases.</p>
-  </div>
-</div>
 
 <h2 class="oss-section-title">GitHub</h2>
 
