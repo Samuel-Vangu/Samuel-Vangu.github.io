@@ -99,9 +99,37 @@
     flex-direction: column;
   }
 
+  .oss-card-intro {
+    font-size: 0.83rem;
+    margin: 0 0 1.1rem;
+    line-height: 1.55;
+    opacity: 0.7;
+  }
+
+  .oss-contribution + .oss-contribution {
+    margin-top: 1.15rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid rgba(127, 127, 127, 0.16);
+  }
+
+  .oss-contribution-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  .oss-contribution-pr {
+    font-size: 0.74rem;
+    font-weight: 600;
+    opacity: 0.5;
+  }
+
   .oss-card-impact {
     font-size: 0.87rem;
-    margin: 0 0 0.95rem;
+    margin: 0 0 0.85rem;
     line-height: 1.55;
     font-style: italic;
     opacity: 0.8;
@@ -109,7 +137,7 @@
 
   .oss-card-details {
     list-style: none;
-    margin: 0 0 1.15rem;
+    margin: 0 0 1rem;
     padding: 0;
     font-size: 0.85rem;
     line-height: 1.6;
@@ -141,7 +169,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
   }
 
   .oss-tag {
@@ -153,7 +181,6 @@
   }
 
   .oss-card-link {
-    margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -177,7 +204,11 @@
   .oss-card-link:hover svg {
     transform: translate(2px, -2px);
   }
-</style> <h2 class="oss-section-title">GitHub</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center" style="margin-bottom: 2.5rem;"> <div class="repo-user-card"> <a href="https://github.com/Samuel-Vangu" target="_blank" rel="noopener noreferrer"> <img src="https://github.com/Samuel-Vangu.png?size=100" alt="Samuel-Vangu avatar" class="repo-user-avatar"> <span class="repo-user-name">Samuel-Vangu</span> </a> </div> </div> <h2 class="oss-section-title">Contributions</h2> <div class="oss-projects"> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/logo_pot.svg" alt="POT logo"> </div> <div class="oss-card-heading"> <h3>POT</h3> <div class="oss-tagline">Python Optimal Transport</div> </div> </div> <div class="oss-card-body"> <p class="oss-card-impact"> Makes distance estimation between probability distributions more accurate at the same computational cost. </p> <ul class="oss-card-details"> <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li> <li>Unbiased estimator, suitable for stochastic optimization</li> <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li> </ul> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Optimal transport</span> <span class="oss-tag">Multi-backend numerics</span> </div> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener"> View PR #838 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/qmcpy.logo.png" alt="QMCPy logo"> </div> <div class="oss-card-heading"> <h3>QMCPy</h3> <div class="oss-tagline">Quasi-Monte Carlo in Python</div> </div> </div> <div class="oss-card-body"> <p class="oss-card-impact"> Adds three ways to sample points that cover a space more evenly than random sampling. </p> <ul class="oss-card-details"> <li>Latin Hypercube sampling</li> <li>Korobov lattice sequences</li> <li>Hammersley point sets</li> </ul> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Numerical methods</span> </div> <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener"> View PR #582 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 . </div> </footer> <script>
+
+  .oss-card > .oss-card-body > .oss-card-link {
+    margin-top: auto;
+  }
+</style> <h2 class="oss-section-title">GitHub</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center" style="margin-bottom: 2.5rem;"> <div class="repo-user-card"> <a href="https://github.com/Samuel-Vangu" target="_blank" rel="noopener noreferrer"> <img src="https://github.com/Samuel-Vangu.png?size=100" alt="Samuel-Vangu avatar" class="repo-user-avatar"> <span class="repo-user-name">Samuel-Vangu</span> </a> </div> </div> <h2 class="oss-section-title">Contributions</h2> <div class="oss-projects"> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/logo_pot.svg" alt="POT logo"> </div> <div class="oss-card-heading"> <h3>POT</h3> <div class="oss-tagline">Python Optimal Transport</div> </div> </div> <div class="oss-card-body"> <p class="oss-card-intro"> Two complementary sampling schemes for the Sliced Wasserstein distance, covering low and high dimension respectively. </p> <div class="oss-contribution"> <h4 class="oss-contribution-title"> QSW / RQSW <span class="oss-contribution-pr">PR #838</span> </h4> <p class="oss-card-impact"> Makes distance estimation between probability distributions more accurate at the same computational cost, in 3D. </p> <ul class="oss-card-details"> <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li> <li>Unbiased estimator, suitable for stochastic optimization</li> <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li> </ul> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Optimal transport</span> <span class="oss-tag">Multi-backend numerics</span> </div> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener"> View PR #838 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> <div class="oss-contribution"> <h4 class="oss-contribution-title"> UnifOrtho <span class="oss-contribution-pr">PR #853</span> </h4> <p class="oss-card-impact"> Extends the same accuracy gain to high dimension, where QSW/RQSW no longer apply. </p> <ul class="oss-card-details"> <li>Directions drawn in blocks of mutually orthogonal vectors, from the Haar measure on the special orthogonal group SO(d)</li> <li>Defined for any dimension, unlike the 3D-only spiral points</li> <li>Built directly on the library's existing Haar-rotation sampler, reviewed and refined across several rounds to fix a real bug along the way</li> </ul> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Optimal transport</span> <span class="oss-tag">High-dimensional sampling</span> </div> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/853" target="_blank" rel="noopener"> View PR #853 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> </div> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/qmcpy.logo.png" alt="QMCPy logo"> </div> <div class="oss-card-heading"> <h3>QMCPy</h3> <div class="oss-tagline">Quasi-Monte Carlo in Python</div> </div> </div> <div class="oss-card-body"> <p class="oss-card-impact"> Adds three ways to sample points that cover a space more evenly than random sampling. </p> <ul class="oss-card-details"> <li>Latin Hypercube sampling</li> <li>Korobov lattice sequences</li> <li>Hammersley point sets</li> </ul> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Numerical methods</span> </div> <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener"> View PR #582 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 . </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
