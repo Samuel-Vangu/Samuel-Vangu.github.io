@@ -102,9 +102,37 @@ nav_order: 4
     flex-direction: column;
   }
 
+  .oss-card-intro {
+    font-size: 0.83rem;
+    margin: 0 0 1.1rem;
+    line-height: 1.55;
+    opacity: 0.7;
+  }
+
+  .oss-contribution + .oss-contribution {
+    margin-top: 1.15rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid rgba(127, 127, 127, 0.16);
+  }
+
+  .oss-contribution-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  .oss-contribution-pr {
+    font-size: 0.74rem;
+    font-weight: 600;
+    opacity: 0.5;
+  }
+
   .oss-card-impact {
     font-size: 0.87rem;
-    margin: 0 0 0.95rem;
+    margin: 0 0 0.85rem;
     line-height: 1.55;
     font-style: italic;
     opacity: 0.8;
@@ -112,7 +140,7 @@ nav_order: 4
 
   .oss-card-details {
     list-style: none;
-    margin: 0 0 1.15rem;
+    margin: 0 0 1rem;
     padding: 0;
     font-size: 0.85rem;
     line-height: 1.6;
@@ -144,7 +172,7 @@ nav_order: 4
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
   }
 
   .oss-tag {
@@ -156,7 +184,6 @@ nav_order: 4
   }
 
   .oss-card-link {
-    margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -179,6 +206,10 @@ nav_order: 4
 
   .oss-card-link:hover svg {
     transform: translate(2px, -2px);
+  }
+
+  .oss-card > .oss-card-body > .oss-card-link {
+    margin-top: auto;
   }
 </style>
 
@@ -208,27 +239,65 @@ nav_order: 4
       </div>
     </div>
     <div class="oss-card-body">
-      <p class="oss-card-impact">
-        Makes distance estimation between probability distributions more accurate at the same computational cost.
+      <p class="oss-card-intro">
+        Two complementary sampling schemes for the Sliced Wasserstein distance, covering low and high dimension respectively.
       </p>
-      <ul class="oss-card-details">
-        <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li>
-        <li>Unbiased estimator, suitable for stochastic optimization</li>
-        <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li>
-      </ul>
-      <div class="oss-tags">
-        <span class="oss-tag">Python</span>
-        <span class="oss-tag">Quasi-Monte Carlo</span>
-        <span class="oss-tag">Optimal transport</span>
-        <span class="oss-tag">Multi-backend numerics</span>
+
+      <div class="oss-contribution">
+        <h4 class="oss-contribution-title">
+          QSW / RQSW
+          <span class="oss-contribution-pr">PR #838</span>
+        </h4>
+        <p class="oss-card-impact">
+          Makes distance estimation between probability distributions more accurate at the same computational cost, in 3D.
+        </p>
+        <ul class="oss-card-details">
+          <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li>
+          <li>Unbiased estimator, suitable for stochastic optimization</li>
+          <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li>
+        </ul>
+        <div class="oss-tags">
+          <span class="oss-tag">Python</span>
+          <span class="oss-tag">Quasi-Monte Carlo</span>
+          <span class="oss-tag">Optimal transport</span>
+          <span class="oss-tag">Multi-backend numerics</span>
+        </div>
+        <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener">
+          View PR #838
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7"></path>
+            <path d="M8 7h9v9"></path>
+          </svg>
+        </a>
       </div>
-      <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener">
-        View PR #838
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 17L17 7"></path>
-          <path d="M8 7h9v9"></path>
-        </svg>
-      </a>
+
+      <div class="oss-contribution">
+        <h4 class="oss-contribution-title">
+          UnifOrtho
+          <span class="oss-contribution-pr">PR #853</span>
+        </h4>
+        <p class="oss-card-impact">
+          Extends the same accuracy gain to high dimension, where QSW/RQSW no longer apply.
+        </p>
+        <ul class="oss-card-details">
+          <li>Directions drawn in blocks of mutually orthogonal vectors, from the Haar measure on the special orthogonal group SO(d)</li>
+          <li>Defined for any dimension, unlike the 3D-only spiral points</li>
+          <li>Built directly on the library's existing Haar-rotation sampler, reviewed and refined across several rounds to fix a real bug along the way</li>
+        </ul>
+        <div class="oss-tags">
+          <span class="oss-tag">Python</span>
+          <span class="oss-tag">Quasi-Monte Carlo</span>
+          <span class="oss-tag">Optimal transport</span>
+          <span class="oss-tag">High-dimensional sampling</span>
+        </div>
+        <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/853" target="_blank" rel="noopener">
+          View PR #853
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7"></path>
+            <path d="M8 7h9v9"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
