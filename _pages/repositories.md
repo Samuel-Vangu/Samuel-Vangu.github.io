@@ -93,6 +93,31 @@ nav_order: 4
     line-height: 1.3;
   }
 
+  .oss-star-badge {
+    margin-left: auto;
+    flex-shrink: 0;
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.22rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(127, 127, 127, 0.1);
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+
+  .oss-star-badge.oss-star-badge--ready {
+    display: inline-flex;
+  }
+
+  .oss-star-badge svg {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+  }
+
   .oss-card-body {
     padding: 0 1.1rem 1.1rem;
     flex-grow: 1;
@@ -141,6 +166,11 @@ nav_order: 4
     border-radius: 4px;
     background: rgba(127, 127, 127, 0.1);
     opacity: 0.85;
+  }
+
+  .oss-tag--badge {
+    opacity: 1;
+    font-weight: 600;
   }
 
   .oss-card-link {
@@ -197,6 +227,12 @@ nav_order: 4
         <h3>POT</h3>
         <div class="oss-tagline">Python Optimal Transport</div>
       </div>
+      <span class="oss-star-badge" id="oss-stars-pot" data-repo="PythonOT/POT">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"></path>
+        </svg>
+        <span class="oss-star-count"></span>
+      </span>
     </div>
     <div class="oss-card-body">
 
@@ -238,6 +274,9 @@ nav_order: 4
         <span class="oss-tag">Python</span>
         <span class="oss-tag">Quasi-Monte Carlo</span>
         <span class="oss-tag">Optimal transport</span>
+        <span class="oss-tag">PyTorch / JAX / TF</span>
+        <span class="oss-tag oss-tag--badge">✓ Tests</span>
+        <span class="oss-tag oss-tag--badge">✓ Examples</span>
       </div>
     </div>
   </div>
@@ -252,6 +291,12 @@ nav_order: 4
         <h3>QMCPy</h3>
         <div class="oss-tagline">Quasi-Monte Carlo in Python</div>
       </div>
+      <span class="oss-star-badge" id="oss-stars-qmcpy" data-repo="QMCSoftware/QMCSoftware">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"></path>
+        </svg>
+        <span class="oss-star-count"></span>
+      </span>
     </div>
     <div class="oss-card-body">
       <p class="oss-card-impact">
@@ -261,6 +306,8 @@ nav_order: 4
         <span class="oss-tag">Python</span>
         <span class="oss-tag">Quasi-Monte Carlo</span>
         <span class="oss-tag">Numerical methods</span>
+        <span class="oss-tag oss-tag--badge">✓ Tests</span>
+        <span class="oss-tag oss-tag--badge">✓ Examples</span>
       </div>
       <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener">
         View PR #582
@@ -273,3 +320,43 @@ nav_order: 4
   </div>
 
 </div>
+
+<script>
+(function () {
+  function formatStarCount(n) {
+    if (n >= 1000) {
+      var k = (n / 1000).toFixed(1).replace(/\.0$/, "");
+      return k + "k";
+    }
+    return String(n);
+  }
+
+  function loadStarCount(badgeEl) {
+    var repo = badgeEl.getAttribute("data-repo");
+    fetch("https://api.github.com/repos/" + repo)
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error("GitHub API error: " + res.status);
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        var count = data.stargazers_count;
+        if (typeof count !== "number") {
+          return;
+        }
+        var countEl = badgeEl.querySelector(".oss-star-count");
+        countEl.textContent = formatStarCount(count);
+        badgeEl.classList.add("oss-star-badge--ready");
+      })
+      .catch(function () {
+        // Leave the badge hidden if the request fails or is rate-limited.
+      });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var badges = document.querySelectorAll(".oss-star-badge[data-repo]");
+    badges.forEach(loadStarCount);
+  });
+})();
+</script>
