@@ -20,8 +20,8 @@ nav_order: 4
   .oss-projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.75rem;
-    max-width: 940px;
+    gap: 1.5rem;
+    max-width: 900px;
     margin-bottom: 2.5rem;
   }
 
@@ -35,7 +35,7 @@ nav_order: 4
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(127, 127, 127, 0.22);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     background: var(--global-bg-color, transparent);
     transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
@@ -43,30 +43,29 @@ nav_order: 4
 
   .oss-card:hover {
     border-color: rgba(127, 127, 127, 0.45);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
   }
 
   .oss-card-header {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem 1.5rem 1.1rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.1rem 1.1rem 0.85rem;
   }
 
   .oss-logo-chip {
     flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
     border: 1px solid rgba(127, 127, 127, 0.18);
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9px;
+    padding: 7px;
     box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .oss-logo-chip img {
@@ -78,106 +77,67 @@ nav_order: 4
 
   .oss-card-heading {
     min-width: 0;
-    padding-top: 3px;
   }
 
   .oss-card-heading h3 {
     margin: 0;
-    font-size: 1.08rem;
+    font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.3;
   }
 
   .oss-card-heading .oss-tagline {
-    font-size: 0.82rem;
-    opacity: 0.62;
-    margin-top: 0.2rem;
-    line-height: 1.4;
+    font-size: 0.74rem;
+    opacity: 0.6;
+    margin-top: 0.1rem;
+    line-height: 1.3;
   }
 
   .oss-card-body {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.1rem 1.1rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
 
-  .oss-card-intro {
-    font-size: 0.83rem;
-    margin: 0 0 1.1rem;
-    line-height: 1.55;
-    opacity: 0.7;
-  }
-
   .oss-contribution + .oss-contribution {
-    margin-top: 1.15rem;
-    padding-top: 1.15rem;
-    border-top: 1px solid rgba(127, 127, 127, 0.16);
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid rgba(127, 127, 127, 0.14);
   }
 
   .oss-contribution-title {
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
-    margin: 0 0 0.5rem;
-    font-size: 0.92rem;
+    gap: 0.4rem;
+    margin: 0 0 0.25rem;
+    font-size: 0.82rem;
     font-weight: 700;
   }
 
   .oss-contribution-pr {
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     font-weight: 600;
     opacity: 0.5;
   }
 
   .oss-card-impact {
-    font-size: 0.87rem;
-    margin: 0 0 0.85rem;
-    line-height: 1.55;
-    font-style: italic;
-    opacity: 0.8;
-  }
-
-  .oss-card-details {
-    list-style: none;
-    margin: 0 0 1rem;
-    padding: 0;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    opacity: 0.88;
-  }
-
-  .oss-card-details li {
-    padding-left: 1rem;
-    position: relative;
-  }
-
-  .oss-card-details li + li {
-    margin-top: 0.35rem;
-  }
-
-  .oss-card-details li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.62em;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: currentColor;
-    opacity: 0.5;
+    font-size: 0.78rem;
+    margin: 0 0 0.5rem;
+    line-height: 1.45;
+    opacity: 0.82;
   }
 
   .oss-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin: 0 0 1rem;
+    gap: 0.35rem;
+    margin: 0.75rem 0 0.85rem;
   }
 
   .oss-tag {
-    font-size: 0.72rem;
-    padding: 0.22rem 0.6rem;
+    font-size: 0.66rem;
+    padding: 0.18rem 0.5rem;
     border-radius: 4px;
     background: rgba(127, 127, 127, 0.1);
     opacity: 0.85;
@@ -186,16 +146,16 @@ nav_order: 4
   .oss-card-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.85rem;
+    gap: 0.3rem;
+    font-size: 0.78rem;
     font-weight: 600;
     text-decoration: none;
     width: fit-content;
   }
 
   .oss-card-link svg {
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
     flex-shrink: 0;
     transition: transform 0.15s ease;
   }
@@ -239,9 +199,6 @@ nav_order: 4
       </div>
     </div>
     <div class="oss-card-body">
-      <p class="oss-card-intro">
-        Two complementary sampling schemes for the Sliced Wasserstein distance, covering low and high dimension respectively.
-      </p>
 
       <div class="oss-contribution">
         <h4 class="oss-contribution-title">
@@ -249,19 +206,8 @@ nav_order: 4
           <span class="oss-contribution-pr">PR #838</span>
         </h4>
         <p class="oss-card-impact">
-          Makes distance estimation between probability distributions more accurate at the same computational cost, in 3D.
+          Faster, unbiased distance estimation between probability distributions in 3D, via low-discrepancy directions on the sphere.
         </p>
-        <ul class="oss-card-details">
-          <li>Low-discrepancy directions on the sphere via generalized spiral points (Rakhmanov–Saff–Zhou), deterministic and randomly rotated</li>
-          <li>Unbiased estimator, suitable for stochastic optimization</li>
-          <li>Verified across all four backends: NumPy, PyTorch, JAX, TensorFlow</li>
-        </ul>
-        <div class="oss-tags">
-          <span class="oss-tag">Python</span>
-          <span class="oss-tag">Quasi-Monte Carlo</span>
-          <span class="oss-tag">Optimal transport</span>
-          <span class="oss-tag">Multi-backend numerics</span>
-        </div>
         <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener">
           View PR #838
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -277,19 +223,8 @@ nav_order: 4
           <span class="oss-contribution-pr">PR #853</span>
         </h4>
         <p class="oss-card-impact">
-          Extends the same accuracy gain to high dimension, where QSW/RQSW no longer apply.
+          Extends the same accuracy gain to any dimension, using mutually orthogonal sampling directions.
         </p>
-        <ul class="oss-card-details">
-          <li>Directions drawn in blocks of mutually orthogonal vectors, from the Haar measure on the special orthogonal group SO(d)</li>
-          <li>Defined for any dimension, unlike the 3D-only spiral points</li>
-          <li>Built directly on the library's existing Haar-rotation sampler, reviewed and refined across several rounds to fix a real bug along the way</li>
-        </ul>
-        <div class="oss-tags">
-          <span class="oss-tag">Python</span>
-          <span class="oss-tag">Quasi-Monte Carlo</span>
-          <span class="oss-tag">Optimal transport</span>
-          <span class="oss-tag">High-dimensional sampling</span>
-        </div>
         <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/853" target="_blank" rel="noopener">
           View PR #853
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -297,6 +232,12 @@ nav_order: 4
             <path d="M8 7h9v9"></path>
           </svg>
         </a>
+      </div>
+
+      <div class="oss-tags">
+        <span class="oss-tag">Python</span>
+        <span class="oss-tag">Quasi-Monte Carlo</span>
+        <span class="oss-tag">Optimal transport</span>
       </div>
     </div>
   </div>
@@ -314,13 +255,8 @@ nav_order: 4
     </div>
     <div class="oss-card-body">
       <p class="oss-card-impact">
-        Adds three ways to sample points that cover a space more evenly than random sampling.
+        Three new ways to sample points that cover a space more evenly than random sampling: Latin Hypercube, Korobov lattices, and Hammersley sets.
       </p>
-      <ul class="oss-card-details">
-        <li>Latin Hypercube sampling</li>
-        <li>Korobov lattice sequences</li>
-        <li>Hammersley point sets</li>
-      </ul>
       <div class="oss-tags">
         <span class="oss-tag">Python</span>
         <span class="oss-tag">Quasi-Monte Carlo</span>
