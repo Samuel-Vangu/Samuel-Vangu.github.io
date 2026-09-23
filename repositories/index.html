@@ -90,6 +90,31 @@
     line-height: 1.3;
   }
 
+  .oss-star-badge {
+    margin-left: auto;
+    flex-shrink: 0;
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.22rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(127, 127, 127, 0.1);
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+
+  .oss-star-badge.oss-star-badge--ready {
+    display: inline-flex;
+  }
+
+  .oss-star-badge svg {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+  }
+
   .oss-card-body {
     padding: 0 1.1rem 1.1rem;
     flex-grow: 1;
@@ -140,6 +165,11 @@
     opacity: 0.85;
   }
 
+  .oss-tag--badge {
+    opacity: 1;
+    font-weight: 600;
+  }
+
   .oss-card-link {
     display: inline-flex;
     align-items: center;
@@ -168,7 +198,45 @@
   .oss-card > .oss-card-body > .oss-card-link {
     margin-top: auto;
   }
-</style> <h2 class="oss-section-title">GitHub</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center" style="margin-bottom: 2.5rem;"> <div class="repo-user-card"> <a href="https://github.com/Samuel-Vangu" target="_blank" rel="noopener noreferrer"> <img src="https://github.com/Samuel-Vangu.png?size=100" alt="Samuel-Vangu avatar" class="repo-user-avatar"> <span class="repo-user-name">Samuel-Vangu</span> </a> </div> </div> <h2 class="oss-section-title">Contributions</h2> <div class="oss-projects"> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/logo_pot.svg" alt="POT logo"> </div> <div class="oss-card-heading"> <h3>POT</h3> <div class="oss-tagline">Python Optimal Transport</div> </div> </div> <div class="oss-card-body"> <div class="oss-contribution"> <h4 class="oss-contribution-title"> QSW / RQSW <span class="oss-contribution-pr">PR #838</span> </h4> <p class="oss-card-impact"> Faster, unbiased distance estimation between probability distributions in 3D, via low-discrepancy directions on the sphere. </p> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener"> View PR #838 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> <div class="oss-contribution"> <h4 class="oss-contribution-title"> UnifOrtho <span class="oss-contribution-pr">PR #853</span> </h4> <p class="oss-card-impact"> Extends the same accuracy gain to any dimension, using mutually orthogonal sampling directions. </p> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/853" target="_blank" rel="noopener"> View PR #853 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Optimal transport</span> </div> </div> </div> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/qmcpy.logo.png" alt="QMCPy logo"> </div> <div class="oss-card-heading"> <h3>QMCPy</h3> <div class="oss-tagline">Quasi-Monte Carlo in Python</div> </div> </div> <div class="oss-card-body"> <p class="oss-card-impact"> Three new ways to sample points that cover a space more evenly than random sampling: Latin Hypercube, Korobov lattices, and Hammersley sets. </p> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Numerical methods</span> </div> <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener"> View PR #582 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 . </div> </footer> <script>
+</style> <h2 class="oss-section-title">GitHub</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center" style="margin-bottom: 2.5rem;"> <div class="repo-user-card"> <a href="https://github.com/Samuel-Vangu" target="_blank" rel="noopener noreferrer"> <img src="https://github.com/Samuel-Vangu.png?size=100" alt="Samuel-Vangu avatar" class="repo-user-avatar"> <span class="repo-user-name">Samuel-Vangu</span> </a> </div> </div> <h2 class="oss-section-title">Contributions</h2> <div class="oss-projects"> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/logo_pot.svg" alt="POT logo"> </div> <div class="oss-card-heading"> <h3>POT</h3> <div class="oss-tagline">Python Optimal Transport</div> </div> <span class="oss-star-badge" id="oss-stars-pot" data-repo="PythonOT/POT"> <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"></path> </svg> <span class="oss-star-count"></span> </span> </div> <div class="oss-card-body"> <div class="oss-contribution"> <h4 class="oss-contribution-title"> QSW / RQSW <span class="oss-contribution-pr">PR #838</span> </h4> <p class="oss-card-impact"> Faster, unbiased distance estimation between probability distributions in 3D, via low-discrepancy directions on the sphere. </p> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/838" target="_blank" rel="noopener"> View PR #838 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> <div class="oss-contribution"> <h4 class="oss-contribution-title"> UnifOrtho <span class="oss-contribution-pr">PR #853</span> </h4> <p class="oss-card-impact"> Extends the same accuracy gain to any dimension, using mutually orthogonal sampling directions. </p> <a class="oss-card-link" href="https://github.com/PythonOT/POT/pull/853" target="_blank" rel="noopener"> View PR #853 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Optimal transport</span> <span class="oss-tag">PyTorch / JAX / TF</span> <span class="oss-tag oss-tag--badge">✓ Tests</span> <span class="oss-tag oss-tag--badge">✓ Examples</span> </div> </div> </div> <div class="oss-card"> <div class="oss-card-header"> <div class="oss-logo-chip"> <img src="/assets/img/qmcpy.logo.png" alt="QMCPy logo"> </div> <div class="oss-card-heading"> <h3>QMCPy</h3> <div class="oss-tagline">Quasi-Monte Carlo in Python</div> </div> <span class="oss-star-badge" id="oss-stars-qmcpy" data-repo="QMCSoftware/QMCSoftware"> <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"></path> </svg> <span class="oss-star-count"></span> </span> </div> <div class="oss-card-body"> <p class="oss-card-impact"> Three new ways to sample points that cover a space more evenly than random sampling: Latin Hypercube, Korobov lattices, and Hammersley sets. </p> <div class="oss-tags"> <span class="oss-tag">Python</span> <span class="oss-tag">Quasi-Monte Carlo</span> <span class="oss-tag">Numerical methods</span> <span class="oss-tag oss-tag--badge">✓ Tests</span> <span class="oss-tag oss-tag--badge">✓ Examples</span> </div> <a class="oss-card-link" href="https://github.com/QMCSoftware/QMCSoftware/pull/582" target="_blank" rel="noopener"> View PR #582 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M7 17L17 7"></path> <path d="M8 7h9v9"></path> </svg> </a> </div> </div> </div> <script>
+(function () {
+  function formatStarCount(n) {
+    if (n >= 1000) {
+      var k = (n / 1000).toFixed(1).replace(/\.0$/, "");
+      return k + "k";
+    }
+    return String(n);
+  }
+
+  function loadStarCount(badgeEl) {
+    var repo = badgeEl.getAttribute("data-repo");
+    fetch("https://api.github.com/repos/" + repo)
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error("GitHub API error: " + res.status);
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        var count = data.stargazers_count;
+        if (typeof count !== "number") {
+          return;
+        }
+        var countEl = badgeEl.querySelector(".oss-star-count");
+        countEl.textContent = formatStarCount(count);
+        badgeEl.classList.add("oss-star-badge--ready");
+      })
+      .catch(function () {
+        // Leave the badge hidden if the request fails or is rate-limited.
+      });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var badges = document.querySelectorAll(".oss-star-badge[data-repo]");
+    badges.forEach(loadStarCount);
+  });
+})();
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 . </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
