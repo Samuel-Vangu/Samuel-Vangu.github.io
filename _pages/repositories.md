@@ -201,6 +201,84 @@ nav_order: 4
   .oss-card > .oss-card-body > .oss-card-link {
     margin-top: auto;
   }
+
+  /* ---- Featured card: European Space Agency (full width, first) ---- */
+  .oss-card--featured {
+    grid-column: 1 / -1;
+    border-top: 4px solid #0b6e99;
+  }
+
+  .oss-card--featured .oss-card-header {
+    padding: 1.5rem 1.5rem 1rem;
+    gap: 1.1rem;
+  }
+
+  .oss-card--featured .oss-logo-chip {
+    width: 96px;
+    height: 64px;
+    padding: 9px;
+  }
+
+  .oss-card--featured .oss-card-heading h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+  }
+
+  .oss-card--featured .oss-card-heading .oss-tagline {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    opacity: 0.7;
+  }
+
+  .oss-card--featured .oss-card-body {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .oss-card--featured .oss-card-impact {
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+
+  .oss-contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .oss-contribution-grid .oss-contribution {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.85rem;
+    border-left: 2px solid rgba(11, 110, 153, 0.45);
+  }
+
+  .oss-contribution-grid .oss-contribution + .oss-contribution {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .oss-contribution-grid .oss-card-link {
+    margin-top: auto;
+  }
+
+  @media (max-width: 700px) {
+    .oss-contribution-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .oss-card--featured .oss-card-heading h3 {
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .oss-card--featured .oss-logo-chip {
+      width: 72px;
+      height: 48px;
+    }
+  }
 </style>
 
 <h2 class="oss-section-title">GitHub</h2>
@@ -216,6 +294,104 @@ nav_order: 4
 <h2 class="oss-section-title">Contributions</h2>
 
 <div class="oss-projects">
+
+  <!-- European Space Agency / torchquad (featured) -->
+  <div class="oss-card oss-card--featured">
+    <div class="oss-card-header">
+      <div class="oss-logo-chip">
+        <!-- Put the ESA logo at /assets/img/logo_esa.png (or change the file name here) -->
+        <img src="/assets/img/logo_esa.png" alt="European Space Agency logo">
+      </div>
+      <div class="oss-card-heading">
+        <h3>EUROPEAN SPACE AGENCY</h3>
+        <div class="oss-tagline">torchquad, open-source library of the Advanced Concepts Team</div>
+      </div>
+      <span class="oss-star-badge" id="oss-stars-torchquad" data-repo="esa/torchquad">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"></path>
+        </svg>
+        <span class="oss-star-count"></span>
+      </span>
+    </div>
+    <div class="oss-card-body">
+
+      <p class="oss-card-impact">
+        torchquad is the European Space Agency's open-source library for fast numerical integration on GPUs, working with PyTorch, JAX and TensorFlow. I added three quasi-Monte Carlo samplers that plug directly into its Monte Carlo integrator.
+      </p>
+
+      <div class="oss-contribution-grid">
+
+        <div class="oss-contribution">
+          <h4 class="oss-contribution-title">
+            Lattice
+            <span class="oss-contribution-pr">PR #249</span>
+          </h4>
+          <p class="oss-card-impact">
+            Randomly shifted lattice points for faster-converging integration, with an optional tent transform (over 20× lower error on a non-periodic test).
+          </p>
+          <a class="oss-card-link" href="https://github.com/esa/torchquad/pull/249" target="_blank" rel="noopener">
+            View PR #249
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7"></path>
+              <path d="M8 7h9v9"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="oss-contribution">
+          <h4 class="oss-contribution-title">
+            Halton
+            <span class="oss-contribution-pr">PR #250</span>
+          </h4>
+          <p class="oss-card-impact">
+            Scrambled Halton sampler written in pure PyTorch for GPU speed, with no power-of-two sample size needed and checked against SciPy.
+          </p>
+          <a class="oss-card-link" href="https://github.com/esa/torchquad/pull/250" target="_blank" rel="noopener">
+            View PR #250
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7"></path>
+              <path d="M8 7h9v9"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="oss-contribution">
+          <h4 class="oss-contribution-title">
+            Randomized Latin Hypercube
+            <span class="oss-contribution-pr">PR #251</span>
+          </h4>
+          <p class="oss-card-impact">
+            Latin Hypercube sampler with exact stratification, over 100× lower error than plain Monte Carlo on additive integrands.
+          </p>
+          <a class="oss-card-link" href="https://github.com/esa/torchquad/pull/251" target="_blank" rel="noopener">
+            View PR #251
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7"></path>
+              <path d="M8 7h9v9"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="oss-tags">
+        <span class="oss-tag">Python</span>
+        <span class="oss-tag">PyTorch / JAX / TF</span>
+        <span class="oss-tag">Numerical integration</span>
+        <span class="oss-tag">Quasi-Monte Carlo</span>
+        <span class="oss-tag">GPU computing</span>
+        <span class="oss-tag oss-tag--badge">✓ Merged</span>
+        <span class="oss-tag oss-tag--badge">✓ Tests</span>
+      </div>
+      <a class="oss-card-link" href="https://github.com/esa/torchquad" target="_blank" rel="noopener">
+        View torchquad
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17L17 7"></path>
+          <path d="M8 7h9v9"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
 
   <!-- POT -->
   <div class="oss-card">
